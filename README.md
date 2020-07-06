@@ -23,13 +23,7 @@ UITableView
 * **Felipe Bastos** 
 
 ## App working
-<img align="left" width="270" height="540" src="https://github.com/FelipeABastos/Cloudwork/blob/master/CloudWorkRegisterOficial.gif"> 
-
-<img align="center" width="270" height="540" 
-src="https://github.com/FelipeABastos/Cloudwork/blob/master/HomePresentOficial.gif"> 
-
-<img align="center" width="270" height="540" 
-src="https://github.com/FelipeABastos/Cloudwork/blob/master/CloudWorkPostOficial.gif"> 
+<img align="left" width="270" height="540" src="https://github.com/FelipeABastos/CalculatorObjC/blob/master/RocketSim%20Recording%20-%20iPhone%2011%20Pro%20Max%20-%202020-07-06%2020.44.40..gif"> 
 
 
 
