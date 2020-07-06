@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7Uk-Ih-J72">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="tzl-NP-mGS">
+            <objects>
+                <viewController id="7Uk-Ih-J72" customClass="CalculatorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FH0-wI-Mw6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hrd-ae-eCJ">
+                                <rect key="frame" x="32" y="397" width="350" height="450"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="0re-gw-bD7">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="450"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gtF-kv-86V">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHl-G8-Rc8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="260" height="80"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="AC">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="allClearPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="jrF-mW-MwV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpK-f9-De9">
+                                                        <rect key="frame" x="270" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" red="0.96078431369999995" green="0.62352941179999999" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="0LA-Gg-Nxk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="/">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dividePressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="8TW-70-wtO"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="2b6-lS-cT3"/>
+                                                    <constraint firstAttribute="height" constant="80" id="nI2-xb-psa"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="38Y-3d-fNB">
+                                                <rect key="frame" x="0.0" y="92.5" width="350" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8N-xe-Rr4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="KqP-dH-mcZ"/>
+                                                            <constraint firstAttribute="height" constant="80" id="zGa-81-HeV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="gpW-Wc-M9J"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtd-4Y-GwC">
+                                                        <rect key="frame" x="90" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="TZA-48-XGx"/>
+                                                            <constraint firstAttribute="width" constant="80" id="uAq-zP-KOX"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="OtY-Ub-tkc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRX-SC-o6H">
+                                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="DoK-TV-U3b"/>
+                                                            <constraint firstAttribute="height" constant="80" id="guQ-Tm-wZp"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="NP9-Lo-llO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rm-9U-M18">
+                                                        <rect key="frame" x="270" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" red="0.96126061679999997" green="0.6229628921" blue="0.1045292094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="IhS-91-AEv"/>
+                                                            <constraint firstAttribute="width" constant="80" id="mfZ-k1-5Nf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="x">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="multiplyPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="hSw-H0-KI5"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="CPc-fI-3e0"/>
+                                                    <constraint firstAttribute="height" constant="80" id="i5V-cw-cBS"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TYp-Rd-K6h">
+                                                <rect key="frame" x="0.0" y="185" width="350" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFV-kH-GZi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="312-bt-nnC"/>
+                                                            <constraint firstAttribute="width" constant="80" id="Dr3-dq-l2u"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="Na6-d6-rDK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJh-Pu-r6k">
+                                                        <rect key="frame" x="90" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="QtU-Tf-PU8"/>
+                                                            <constraint firstAttribute="width" constant="80" id="zy3-h5-boW"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="EhJ-YJ-f5a"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tm-rj-wSJ">
+                                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="RcD-xe-d7J"/>
+                                                            <constraint firstAttribute="width" constant="80" id="dpE-fx-Rhd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="zJA-NU-EyY"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiN-rm-zo4">
+                                                        <rect key="frame" x="270" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" red="0.96126061679999997" green="0.6229628921" blue="0.1045292094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="8fQ-qW-BcI"/>
+                                                            <constraint firstAttribute="width" constant="80" id="QPQ-Wy-R7q"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="-">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="subtractPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="vuH-RX-JtA"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="3FM-H8-vUR"/>
+                                                    <constraint firstAttribute="height" constant="80" id="iY9-95-PnU"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="JJQ-Zy-Sn5">
+                                                <rect key="frame" x="0.0" y="277.5" width="350" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAn-JE-Gvj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="2xA-m5-cIR"/>
+                                                            <constraint firstAttribute="height" constant="80" id="oRi-fy-fpC"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="cEe-XK-Vma"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezg-1b-lL7">
+                                                        <rect key="frame" x="90" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="MvJ-NX-B06"/>
+                                                            <constraint firstAttribute="width" constant="80" id="h2C-Xu-ciy"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="0Wf-jl-nVf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYS-7K-l6Z">
+                                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="Map-Te-Vgj"/>
+                                                            <constraint firstAttribute="height" constant="80" id="fYC-BM-zBA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="31o-uu-U5b"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxb-bz-W7g">
+                                                        <rect key="frame" x="270" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" red="0.96126061679999997" green="0.6229628921" blue="0.1045292094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="NlO-yQ-9oS"/>
+                                                            <constraint firstAttribute="height" constant="80" id="v4v-Mo-vBf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="addPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="rFy-SZ-EVX"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="6Hw-TA-7n2"/>
+                                                    <constraint firstAttribute="width" constant="350" id="Y6G-J5-oSB"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GWL-5h-fs5">
+                                                <rect key="frame" x="0.0" y="370" width="350" height="80"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-XW-wCB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="HUO-oA-lvG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLY-Bk-RNc">
+                                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="3iH-ea-PJd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="dotPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="HlG-ws-5Qf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peG-yw-9rk">
+                                                        <rect key="frame" x="270" y="0.0" width="80" height="80"/>
+                                                        <color key="backgroundColor" red="0.96126061679999997" green="0.6229628921" blue="0.1045292094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="PTK-Bb-rL4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="40"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="equalPressed:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="T7G-d3-yg4"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="350" id="2tP-g3-ILq"/>
+                                                    <constraint firstAttribute="height" constant="80" id="csp-P8-JpO"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="450" id="8kf-bu-7on"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0re-gw-bD7" firstAttribute="centerX" secondItem="Hrd-ae-eCJ" secondAttribute="centerX" id="eUw-iA-Pjq"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JN-pu-zSR">
+                                <rect key="frame" x="32" y="189" width="350" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8Yz-dU-I09"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUI-cu-1Xn">
+                                <rect key="frame" x="35" y="49" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="r4T-Me-KY6"/>
+                                    <constraint firstAttribute="height" constant="28" id="tPv-qf-P13"/>
+                                </constraints>
+                                <state key="normal" image="Save"/>
+                                <connections>
+                                    <action selector="saveCount:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="YZU-n3-jDi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XR5-X4-Vym">
+                                <rect key="frame" x="352" y="49" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="8Rl-8M-B1J"/>
+                                    <constraint firstAttribute="width" constant="28" id="ajH-Ma-BME"/>
+                                </constraints>
+                                <state key="normal" image="Folder"/>
+                                <connections>
+                                    <action selector="showSavedCounts:" destination="7Uk-Ih-J72" eventType="touchUpInside" id="uRe-PO-7Gf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name your count to save" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ju-iK-e6v">
+                                <rect key="frame" x="74" y="49" width="266" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="zTv-Bh-gTe"/>
+                                    <constraint firstAttribute="width" constant="266" id="zyB-Ad-nPh"/>
+                                </constraints>
+                                <color key="textColor" red="0.96078431369999995" green="0.62352941179999999" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8JN-pu-zSR" firstAttribute="centerX" secondItem="FH0-wI-Mw6" secondAttribute="centerX" id="09o-Pd-PPA"/>
+                            <constraint firstItem="6K5-MG-USy" firstAttribute="trailing" secondItem="XR5-X4-Vym" secondAttribute="trailing" constant="34" id="FCw-yX-i7D"/>
+                            <constraint firstItem="XR5-X4-Vym" firstAttribute="leading" secondItem="9ju-iK-e6v" secondAttribute="trailing" constant="12" id="Gjd-Cd-0GP"/>
+                            <constraint firstItem="PUI-cu-1Xn" firstAttribute="top" secondItem="6K5-MG-USy" secondAttribute="top" constant="5" id="JEy-ax-pXS"/>
+                            <constraint firstItem="9ju-iK-e6v" firstAttribute="leading" secondItem="PUI-cu-1Xn" secondAttribute="trailing" constant="11" id="M1c-zf-TdY"/>
+                            <constraint firstItem="Hrd-ae-eCJ" firstAttribute="top" secondItem="8JN-pu-zSR" secondAttribute="bottom" constant="8" id="WhD-IK-jXl"/>
+                            <constraint firstItem="6K5-MG-USy" firstAttribute="bottom" secondItem="Hrd-ae-eCJ" secondAttribute="bottom" constant="15" id="YYa-fR-bns"/>
+                            <constraint firstItem="XR5-X4-Vym" firstAttribute="top" secondItem="6K5-MG-USy" secondAttribute="top" constant="5" id="ebM-wl-YCr"/>
+                            <constraint firstItem="PUI-cu-1Xn" firstAttribute="leading" secondItem="6K5-MG-USy" secondAttribute="leading" constant="35" id="fcN-hl-6cb"/>
+                            <constraint firstItem="6K5-MG-USy" firstAttribute="trailing" secondItem="8JN-pu-zSR" secondAttribute="trailing" constant="32" id="gbs-fM-CU3"/>
+                            <constraint firstItem="9ju-iK-e6v" firstAttribute="centerX" secondItem="FH0-wI-Mw6" secondAttribute="centerX" id="jqp-NM-v8T"/>
+                            <constraint firstItem="8JN-pu-zSR" firstAttribute="leading" secondItem="6K5-MG-USy" secondAttribute="leading" constant="32" id="pST-Pj-Q1e"/>
+                            <constraint firstItem="Hrd-ae-eCJ" firstAttribute="centerX" secondItem="FH0-wI-Mw6" secondAttribute="centerX" id="uLR-Ei-EUy"/>
+                            <constraint firstItem="9ju-iK-e6v" firstAttribute="top" secondItem="6K5-MG-USy" secondAttribute="top" constant="5" id="vey-Kv-AOM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6K5-MG-USy"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnAdd" destination="Dxb-bz-W7g" id="Pap-vZ-YOY"/>
+                        <outlet property="btnDivide" destination="lpK-f9-De9" id="bJO-gb-A1F"/>
+                        <outlet property="btnMultiply" destination="5rm-9U-M18" id="j6b-iE-cZd"/>
+                        <outlet property="btnSubtract" destination="CiN-rm-zo4" id="M21-gX-gH1"/>
+                        <outlet property="lblCount" destination="8JN-pu-zSR" id="CLl-2S-a2r"/>
+                        <outlet property="txtName" destination="9ju-iK-e6v" id="CZc-eC-hGi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6MF-PI-2pd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="154"/>
+        </scene>
+        <!--Saved Counts View Controller-->
+        <scene sceneID="h4f-2l-Gfx">
+            <objects>
+                <viewController storyboardIdentifier="SavesView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HNc-OZ-CvR" customClass="SavedCountsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XTN-TW-EHb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNf-Cv-tmU">
+                                <rect key="frame" x="32" y="44" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="p12-84-nXB"/>
+                                    <constraint firstAttribute="width" constant="35" id="pMI-A0-gw9"/>
+                                </constraints>
+                                <state key="normal" image="arrow.left"/>
+                                <connections>
+                                    <action selector="backToCalculator:" destination="HNc-OZ-CvR" eventType="touchUpInside" id="ffd-bX-qMu"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F4d-wL-5Ip">
+                                <rect key="frame" x="32" y="94" width="350" height="755"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="calcCell" rowHeight="83" id="ZRf-Y9-Ea1" customClass="CountCell">
+                                        <rect key="frame" x="0.0" y="28" width="350" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZRf-Y9-Ea1" id="gIx-f5-8WI">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HNc-OZ-CvR" id="vaG-BZ-rHd"/>
+                                    <outlet property="delegate" destination="HNc-OZ-CvR" id="TVs-L6-LUx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F4d-wL-5Ip" firstAttribute="leading" secondItem="fNf-Cv-tmU" secondAttribute="leading" id="GrR-60-wVE"/>
+                            <constraint firstItem="F4d-wL-5Ip" firstAttribute="top" secondItem="fNf-Cv-tmU" secondAttribute="bottom" constant="15" id="WCF-wY-eQa"/>
+                            <constraint firstItem="fNf-Cv-tmU" firstAttribute="leading" secondItem="RR7-vy-3n7" secondAttribute="leading" constant="32" id="XCh-1S-Xml"/>
+                            <constraint firstItem="RR7-vy-3n7" firstAttribute="bottom" secondItem="F4d-wL-5Ip" secondAttribute="bottom" constant="13" id="aBs-nH-d2d"/>
+                            <constraint firstItem="fNf-Cv-tmU" firstAttribute="top" secondItem="RR7-vy-3n7" secondAttribute="top" id="c1i-uc-oPx"/>
+                            <constraint firstItem="F4d-wL-5Ip" firstAttribute="centerX" secondItem="XTN-TW-EHb" secondAttribute="centerX" id="zeh-Vx-ugm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RR7-vy-3n7"/>
+                    </view>
+                    <connections>
+                        <outlet property="tbCalcs" destination="F4d-wL-5Ip" id="V30-zR-QXs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONN-dZ-caJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="153"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Folder" width="128" height="128"/>
+        <image name="Save" width="128" height="128"/>
+        <image name="arrow.left" width="128" height="128"/>
+    </resources>
+</document>
